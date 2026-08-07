@@ -1,0 +1,14 @@
+iterative_stratification==0.1.9
+matplotlib==3.10.7
+mpl_ascii==1.0.1
+numpy==1.26.4
+opencv_python==4.12.0.88
+open_clip_torch==3.3.0
+pandas==2.3.3
+pillow==11.3.0
+seaborn==0.13.2
+scikit_learn==1.7.2
+torch==2.0.0+cu117
+torchvision==0.15.0+cu117
+tqdm==4.67.1
+transformers==4.49.0
