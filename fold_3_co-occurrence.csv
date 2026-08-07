@@ -1,0 +1,9 @@
+,_vibrio,_photobact,_tenacibac,_aeromonas,_lactococcus
+emaciated,0.0,0.0,0.0,0.0,0.0
+damaged_fins,0.27868852,0.2,0.44444445,0.0,0.0
+missing_skin_skin_lesions,0.37704918,0.2,1.0,0.85714287,0.0
+ulcers,0.0,0.0,0.22222222,0.0,0.0
+exophthalmos,0.0,0.0,0.0,0.2857143,1.0
+hemorrhages,0.9508197,0.8,0.7222222,1.0,1.0
+swollen_abdomen,0.0,0.2,0.0,0.42857143,0.0
+abnormal_coloration,0.24590164,0.4,0.0,0.0,0.0
