@@ -1,3 +1,9 @@
+# Project-specific
+runs/
+data/
+train_data.csv
+test_data.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
