@@ -1,6 +1,6 @@
 # CO-BASS
 
-Official repository containing the code, data, and benchmark implementations for the paper **"From Symptoms to Pathogens: Biologically Constrained Multi-Task Vision Models for Automated Fish Disease Diagnosis"** (ECCV - CV4Ecology).
+Official repository containing the code, data, and benchmark implementations for the paper **"From Symptoms to Pathogens: Biologically Constrained Multi-Task Vision Models for Automated Fish Disease Diagnosis"** (ECCV 2026 - CV4Ecology).
 
 ---
 
@@ -10,7 +10,7 @@ Official repository containing the code, data, and benchmark implementations for
 
 320 standardized images of symptomatic European seabass annotated by veterinary experts for 8 physical symptoms and 5 pathogens.
 
-To request access to the data for research purposes, please write an email to the corresponding author mentioning the dataset name: portelli.beatrice[at]spes.uniud.it
+⚠️ To request access to the data for research purposes, please write an email to the corresponding author mentioning the dataset name: portelli.beatrice[at]spes.uniud.it
 
 **Symptoms**
 1. emaciation
@@ -139,11 +139,11 @@ python 04_run_MTL.py [--model MODEL] [--alpha ALPHA]
 ```
 | inputs   | outputs | description |
 | -------- | ------- | ----------- |
-| train_data.csv  | runs/{SYM_RUN_ID,DIS_RUN_ID} | The two base folders for results of the run. <span style="color:tomato;">Predictions for the symptom and disease prediction task of the same model are saved in separate folders</span> for ease of processing. The two IDs are automatically created as {timestamp}\_sym\_[MTL][alpha={alpha}]{model} and {timestamp}\_dis\_[MTL][alpha={alpha}]{model}.|
+| train_data.csv  | runs/{SYM_RUN_ID,DIS_RUN_ID} | The two base folders for results of the run. <span style="color:tomato;">⚠️ Predictions for the symptom and disease prediction task of the same model are saved in separate folders</span> for ease of processing. The two IDs are automatically created as {timestamp}\_sym\_[MTL][alpha={alpha}]{model} and {timestamp}\_dis\_[MTL][alpha={alpha}]{model}.|
 | test_data.csv   | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_train_{1,2,3,4,5}.pkl | For each training sample in the fold, real labels and predicted probability distribution. |
 | split_info.json | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_val_{1,2,3,4,5}.pkl | For each validation sample in the fold, real labels and predicted probability distribution. |
 |                 | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_test_ALL.pkl | For each test sample, real labels and predicted probability distribution. |
-|                 | runs/{DIS_RUN_ID}/best_fold_{1,2,3,4,5}.pth | Weights of the best-performing model for each split/fold. <span style="color:tomato;">WARNING: the model weights are stored ONLY in the {DIS_RUN_ID} folder, not in {SYM_RUN_ID}, to save space.</span> |
+|                 | runs/{DIS_RUN_ID}/best_fold_{1,2,3,4,5}.pth | Weights of the best-performing model for each split/fold. <span style="color:tomato;">⚠️ WARNING: the model weights are stored ONLY in the {DIS_RUN_ID} folder, not in {SYM_RUN_ID}, to save space.</span> |
 
 **`05_run_S2D-MTL.py`**
 ```bash
@@ -161,11 +161,11 @@ python 05_run_S2D-MTL.py [--model MODEL] [--alpha ALPHA] [--beta BETA] [--gamma 
 ```
 | inputs   | outputs | description |
 | -------- | ------- | ----------- |
-| train_data.csv  | runs/{SYM_RUN_ID,DIS_RUN_ID} | The two base folders for results of the run. <span style="color:tomato;">Predictions for the symptom and disease prediction task of the same model are saved in separate folders</span> for ease of processing. The two IDs are automatically created as {timestamp}\_sym\_[MTL][alpha={alpha}][beta={beta}][gamma={gamma}]{model} and {timestamp}\_dis\_[S2D_MTL][alpha={alpha}][beta={beta}][gamma={gamma}]{model}.|
+| train_data.csv  | runs/{SYM_RUN_ID,DIS_RUN_ID} | The two base folders for results of the run. <span style="color:tomato;">⚠️ Predictions for the symptom and disease prediction task of the same model are saved in separate folders</span> for ease of processing. The two IDs are automatically created as {timestamp}\_sym\_[MTL][alpha={alpha}][beta={beta}][gamma={gamma}]{model} and {timestamp}\_dis\_[S2D_MTL][alpha={alpha}][beta={beta}][gamma={gamma}]{model}.|
 | test_data.csv   | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_train_{1,2,3,4,5}.pkl | For each training sample in the fold, real labels and predicted probability distribution. |
 | split_info.json | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_val_{1,2,3,4,5}.pkl | For each validation sample in the fold, real labels and predicted probability distribution. |
 |                 | runs/{SYM_RUN_ID,DIS_RUN_ID}/preds_test_ALL.pkl | For each test sample, real labels and predicted probability distribution. |
-|                 | runs/{DIS_RUN_ID}/best_fold_{1,2,3,4,5}.pth | Weights of the best-performing model for each split/fold. <span style="color:tomato;">WARNING: the model weights are stored ONLY in the {DIS_RUN_ID} folder, not in {SYM_RUN_ID}, to save space.</span> |
+|                 | runs/{DIS_RUN_ID}/best_fold_{1,2,3,4,5}.pth | Weights of the best-performing model for each split/fold. <span style="color:tomato;">⚠️ WARNING: the model weights are stored ONLY in the {DIS_RUN_ID} folder, not in {SYM_RUN_ID}, to save space.</span> |
 |                 | ./fold_{1,2,3,4,5}_co-occurrence.csv | Pre-calculated co-occurrence matrix of symptoms and diseases in the training set of the five folds. Used when gamma>0 (causal matrix loss). |
 
 **`06_calculate_performances.py`**
