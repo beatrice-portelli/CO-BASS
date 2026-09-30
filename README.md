@@ -1,6 +1,6 @@
 # CO-BASS
 
-Official repository containing the code, data, and benchmark implementations for the paper **"From Symptoms to Pathogens: Biologically Constrained Multi-Task Vision Models for Automated Fish Disease Diagnosis"** (ECCV 2026 - CV4Ecology).
+Official repository containing the code, data, and benchmark implementations for the paper [**"From Symptoms to Pathogens: Biologically Constrained Multi-Task Vision Models for Automated Fish Disease Diagnosis"**](https://openreview.net/forum?id=iMFCtuplMt) (ECCV 2026 - CV4Ecology).
 
 ---
 
